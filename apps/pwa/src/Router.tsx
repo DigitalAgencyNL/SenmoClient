@@ -1,10 +1,15 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { HomePage } from './pages/Home.page';
-
+import { HomePage } from './pages/Home.page'; 
+import { UiShell } from 'ui-shell';
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <HomePage />,
+    element: <UiShell />, 
+    children: [
+      {
+        element: <HomePage />,
+        path: '/',
+      },
+    ],
   },
 ]);
 

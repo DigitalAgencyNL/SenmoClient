@@ -17,7 +17,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@pwa/*": ["apps/pwa/src/*"]
+      "@pwa/*": ["apps/pwa/src/*"],
+      "ui-shell": ["libs/ui-shell/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

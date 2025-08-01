@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
-import AppLayout from './AppLayout';
+import Footer from './footer';
 
-describe('AppLayout', () => {
+describe('Footer', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<AppLayout />);
+    const { baseElement } = render(<Footer />);
     expect(baseElement).toBeTruthy();
   });
 });

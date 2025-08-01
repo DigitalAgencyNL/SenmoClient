@@ -1,6 +1,6 @@
 import nx from '@nx/eslint-plugin';
 import mantine from 'eslint-config-mantine';
-import tseslint from 'typescript-eslint';
+import tseslint from 'typescript-eslint'; 
 export default [  
   ...mantine,
   ...tseslint.config(
@@ -21,7 +21,8 @@ export default [
   },
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
-    rules: {
+  
+    rules: { 
       '@nx/enforce-module-boundaries': [
         'error',
         {

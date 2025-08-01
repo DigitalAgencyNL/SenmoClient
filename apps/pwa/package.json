@@ -1,0 +1,29 @@
+{
+  "name": "senmo-pwa",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "nx serve",
+    "build": "nx vite:build",
+    "preview": "nx vite:preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "npm run eslint && npm run stylelint",
+    "eslint": "eslint . --cache",
+    "stylelint": "stylelint '**/*.css' --cache",
+    "prettier": "prettier --check \"**/*.{ts,tsx}\"",
+    "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
+    "vitest": "nx vite:test run",
+    "vitest:watch": "nx vite:test",
+    "test": "npm run typecheck && npm run prettier && npm run lint && npm run nx vite:test && npm run build",
+    "storybook": "nx serve:storybook -p 6006",
+    "storybook:build": "nx build-storybook"
+  },
+  "dependencies": {
+    "@mantine/core": "8.2.2",
+    "@mantine/hooks": "8.2.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2"
+  }
+}

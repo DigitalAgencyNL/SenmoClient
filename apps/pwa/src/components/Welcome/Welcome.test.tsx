@@ -1,5 +1,6 @@
-import { render, screen } from '@test-utils';
+import { render, screen } from '@pwa/test-utils';
 import { Welcome } from './Welcome';
+import '@testing-library/jest-dom';
 
 describe('Welcome component', () => {
   it('has correct Vite guide link', () => {

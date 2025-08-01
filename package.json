@@ -4,20 +4,20 @@
   "type": "module",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "dev": "nx serve",
+    "build": "tsc && nx vite:build",
+    "preview": "nx vite:preview",
     "typecheck": "tsc --noEmit",
     "lint": "npm run eslint && npm run stylelint",
     "eslint": "eslint . --cache",
     "stylelint": "stylelint '**/*.css' --cache",
     "prettier": "prettier --check \"**/*.{ts,tsx}\"",
     "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
-    "vitest": "vitest run",
-    "vitest:watch": "vitest",
-    "test": "npm run typecheck && npm run prettier && npm run lint && npm run vitest && npm run build",
-    "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build"
+    "vitest": "nx vite:test run",
+    "vitest:watch": "nx vite:test",
+    "test": "npm run typecheck && npm run prettier && npm run lint && npm run nx vite:test && npm run build",
+    "storybook": "nx serve:storybook -p 6006",
+    "storybook:build": "nx build-storybook"
   },
   "dependencies": {
     "@mantine/core": "8.2.2",
@@ -29,6 +29,11 @@
   "devDependencies": {
     "@eslint/js": "^9.29.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.2",
+    "@nx/eslint": "21.3.10",
+    "@nx/react": "^21.3.10",
+    "@nx/storybook": "21.3.10",
+    "@nx/vite": "21.3.10",
+    "@nx/web": "21.3.10",
     "@storybook/react": "^8.6.12",
     "@storybook/react-vite": "^8.6.12",
     "@testing-library/dom": "^10.4.0",
@@ -39,12 +44,15 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.5.2",
+    "@vitest/ui": "^3.0.0",
     "eslint": "^9.29.0",
     "eslint-config-mantine": "^4.0.3",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "identity-obj-proxy": "^3.0.0",
+    "jiti": "2.4.2",
     "jsdom": "^26.1.0",
+    "nx": "21.3.10",
     "postcss": "^8.5.5",
     "postcss-preset-mantine": "1.17.0",
     "postcss-simple-vars": "^7.0.1",
@@ -60,5 +68,6 @@
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.3"
   },
-  "packageManager": "yarn@4.9.2"
+  "packageManager": "yarn@4.9.2",
+  "nx": {}
 }

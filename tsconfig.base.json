@@ -18,8 +18,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-       "@pwa/*": ["apps/pwa/src/*"]
-      
+       "@pwa/*": ["apps/pwa/src/*"] 
     }
   },
   "exclude": ["node_modules", "tmp"]

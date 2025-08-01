@@ -15,7 +15,7 @@
     "noEmit": true,
     "jsx": "react-jsx", 
     "module": "esnext",
-    "moduleResolution": "Node",
+    "moduleResolution": "Node", 
   },
   "files": [],
   "include": [],

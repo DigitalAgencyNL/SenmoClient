@@ -1,9 +1,36 @@
 {
   "name": "pwa",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "app/pwa/src",
+  "sourceRoot": "apps/pwa/src",
   "projectType": "application",
   "tags": [],
-  "// targets": "to see all targets run: nx show project pwa --web",
-  "targets": {}
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "options": {
+        "configFile": "apps/pwa/vite.config.ts",
+        "outputPath": "../../dist/apps/pwa"
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "options": {
+        "buildTarget": "pwa:build",
+        "configFile": "apps/pwa/vite.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/pwa/**/*.ts", "apps/pwa/**/*.tsx"]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "options": {
+        "passWithNoTests": true,
+        "configFile": "apps/pwa/vite.config.ts"
+      }
+    }
+  }
 }
